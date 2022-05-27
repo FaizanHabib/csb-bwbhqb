@@ -8,7 +8,11 @@ console.log(localStorage.clear("myLeads"));
 console.log(ulEl);
 
 inputBtn.addEventListener("click", function () {
-  myLeads.push(inputEl.value);
+  if (inputEl.value == ""){
+    return false
+    } else {
+      myLeads.push(inputEl.value);
+    }
   renderLeads();
   inputEl.value = "";
 });
